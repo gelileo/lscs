@@ -10,18 +10,53 @@
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
-
+    
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+            display: flex;
+            height: 100vh;
         }
-
+    
+        .sidebar {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 20px;
+            width: 150px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        .sidebar h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+    
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    
+        .sidebar ul li {
+            margin-bottom: 15px;
+        }
+    
+        .sidebar ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.8em;
+        }
+    
+        .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+    
+        .content {
+            flex: 1;
+            padding: 40px;
+            background-color: #ffffff;
+            overflow-y: auto;
+        }
+    
         .header {
             display: flex;
             align-items: center;
@@ -29,37 +64,37 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #eeeeee;
         }
-
+    
         .header img {
             border-radius: 50%;
-            border: 2px solid #ada9a9; 
+            border: 2px solid #ada9a9;
             width: 80px;
             height: 80px;
             margin-right: 20px;
         }
-
+    
         .header h1 {
             font-size: 2.5em;
             color: #333333;
             margin: 0;
         }
-
+    
         .syllabus {
             list-style-type: none;
             padding: 0;
         }
-
+    
         .syllabus li {
             padding: 15px 0;
             border-bottom: 1px solid #eeeeee;
             color: #555555;
             font-size: 1.1em;
         }
-
+    
         .syllabus li:last-child {
             border-bottom: none;
         }
-
+    
         .syllabus li::before {
             content: "•";
             color: #007BFF;
@@ -74,22 +109,52 @@
 <body>
 
     <div class="container">
-        <div class="header">
-            <img src="icon.png" alt="Course Icon">
-            <h1>中国地理常识</h1>
+        <div class="sidebar">
+            <h2>中文课本</h2>
+            <ul>
+                <li><a href="#geography">中国地理常识</a></li>
+                <li><a href="#newSS4">新双双第四册</a></li>
+                <!-- Add more courses here -->
+            </ul>
         </div>
-        <ul class="syllabus">
-            <li><a href="./中国地理常识/课文拼音对照/lesson1.html">第一课 亚洲最大的国家</a></li>
-            <li><a href="./中国地理常识/课文拼音对照/lesson2.html">第二课 人口和民族</a></li>
-            <li><a href="./中国地理常识/课文拼音对照/lesson3.html">第三课 山地和高原</a></li>
-            <li><a href="./中国地理常识/课文拼音对照/lesson4.html">第四课 平原和盆地</a></li>
-            <li><a href="./中国地理常识/课文拼音对照/lesson5.html">第五课 江河与湖泊</a></li>
-            <li><a href="./中国地理常识/课文拼音对照/lesson6.html">第六课 气 候</a></li>
-            <li><a href="./中国地理常识/课文拼音对照/lesson7.html">第七课 农作物和名产</a></li>
-            <li><a href="./中国地理常识/课文拼音对照/lesson8.html">第八课 野生动植物</a></li>
-            <li><a href="./中国地理常识/课文拼音对照/lesson9.html">第九课 行政区划</a></li>
-            <!-- <li><a href="./中国地理常识/课文拼音对照/lesson10.html">第八课 野生动植物</a></li> -->
-        </ul>
+       
+
+        <div class="content">
+            
+            <!-- Course 1 Syllabus -->
+            <div class="course" id="geography">
+                <div class="header">
+                    <img src="icon.png" alt="Course Icon">
+                    <h1>中国地理常识</h1>
+                </div>
+                <ul class="syllabus">
+                    <li><a href="./中国地理常识/课文拼音对照/lesson1.html">第一课 亚洲最大的国家</a></li>
+                    <li><a href="./中国地理常识/课文拼音对照/lesson2.html">第二课 人口和民族</a></li>
+                    <li><a href="./中国地理常识/课文拼音对照/lesson3.html">第三课 山地和高原</a></li>
+                    <li><a href="./中国地理常识/课文拼音对照/lesson4.html">第四课 平原和盆地</a></li>
+                    <li><a href="./中国地理常识/课文拼音对照/lesson5.html">第五课 江河与湖泊</a></li>
+                    <li><a href="./中国地理常识/课文拼音对照/lesson6.html">第六课 气 候</a></li>
+                    <li><a href="./中国地理常识/课文拼音对照/lesson7.html">第七课 农作物和名产</a></li>
+                    <li><a href="./中国地理常识/课文拼音对照/lesson8.html">第八课 野生动植物</a></li>
+                    <li><a href="./中国地理常识/课文拼音对照/lesson9.html">第九课 行政区划</a></li>
+                    <!-- <li><a href="./中国地理常识/课文拼音对照/lesson10.html">第八课 野生动植物</a></li> -->
+                </ul>
+            </div>
+        
+            <!-- Course 2 Syllabus -->
+            <div class="course" id="newSS4">
+                <div class="header">
+                    <img src="icon.png" alt="Course Icon">
+                    <h1>新双双第四册</h1>
+                </div>
+                <ul class="syllabus">
+                    <li><a href="./Course2/lesson1.html">Lesson 1</a></li>
+                    <li><a href="./Course2/lesson2.html">Lesson 2</a></li>
+                    <li><a href="./Course2/lesson3.html">Lesson 3</a></li>
+                </ul>
+            </div>
+        </div>
+       
     </div>
 
 </body>
