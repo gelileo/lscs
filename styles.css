@@ -28,7 +28,7 @@ body {
 }
 
 .sidebar h2 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-bottom: 10px;
 }
 
@@ -69,40 +69,49 @@ body {
 .header img {
     border-radius: 50%;
     border: 2px solid #ada9a9;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     margin-right: 20px;
 }
 
 .header h1 {
-    font-size: 2.5em;
+    font-size: 1.8em;
     color: #333333;
     margin: 0;
 }
 
 .syllabus {
     list-style-type: none;
-    padding: 0;
+    /* Remove default bullet points */
+    padding-left: 0;
 }
 
-.syllabus li {
-    padding: 15px 0;
-    border-bottom: 1px solid #eeeeee;
-    color: #555555;
-    font-size: 1.1em;
+.syllabus>li {
+    padding: 10px 0;
 }
 
-.syllabus li:last-child {
-    border-bottom: none;
+.syllabus ul {
+    list-style-type: disc;
+    /* Add bullet points to nested lists */
+    margin-left: 20px;
+    /* Indent nested list */
+    padding-left: 20px;
+    /* Add padding to make the list look cleaner */
 }
 
-.syllabus li::before {
-    content: "•";
+.syllabus ul li {
+    padding: 5px 0;
+    /* Padding for inner list items */
+}
+
+.syllabus a {
+    text-decoration: none;
     color: #007BFF;
-    font-weight: bold;
-    display: inline-block;
-    width: 20px;
-    margin-left: -20px;
+    /* Link color */
+}
+
+.syllabus a:hover {
+    text-decoration: underline;
 }
 
 /* Toggle Button */
