@@ -128,8 +128,8 @@ body {
     font-size: 1.2em;
 }
 
-/* Media Queries for small screens */
-@media (max-width: 768px) {
+/* Media Queries for small screens, large phone portrait: 414 */
+@media (max-width: 414px) {
     .sidebar {
         position: absolute;
         left: 0;
