@@ -5,111 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>中文学校</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-    
-        .container {
-            display: flex;
-            height: 100vh;
-        }
-    
-        .sidebar {
-            background-color: #333333;
-            color: #ffffff;
-            padding: 20px;
-            width: 150px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-        }
-    
-        .sidebar h2 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-    
-        .sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-    
-        .sidebar ul li {
-            margin-bottom: 15px;
-        }
-    
-        .sidebar ul li a {
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.8em;
-        }
-    
-        .sidebar ul li a:hover {
-            text-decoration: underline;
-        }
-    
-        .content {
-            flex: 1;
-            padding: 40px;
-            background-color: #ffffff;
-            overflow-y: auto;
-        }
-    
-        .header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #eeeeee;
-        }
-    
-        .header img {
-            border-radius: 50%;
-            border: 2px solid #ada9a9;
-            width: 60px;
-            height: 60px;
-            margin-right: 20px;
-        }
-    
-        .header h1 {
-            font-size: 2.0em;
-            color: #333333;
-            margin: 0;
-        }
-    
-        .syllabus {
-            list-style-type: none;
-            padding: 0;
-        }
-    
-        .syllabus li {
-            padding: 15px 0;
-            border-bottom: 1px solid #eeeeee;
-            color: #555555;
-            font-size: 1.0em;
-        }
-    
-        .syllabus li:last-child {
-            border-bottom: none;
-        }
-    
-        .syllabus li::before {
-            content: "•";
-            color: #007BFF;
-            font-weight: bold;
-            display: inline-block;
-            width: 20px;
-            margin-left: -20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
     <div class="container">
-        <div class="sidebar">
+        <!-- Sidebar -->
+        <button class="toggle-btn" onclick="toggleSidebar()">☰ Courses</button>
+        <div class="sidebar" collapsed" id="sidebar"> 
             <h2>中文课本</h2>
             <ul>
                 <li><a href="#newSS4">新双双第四册</a></li>
@@ -176,6 +80,12 @@
         
     </div>
 
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('collapsed');
+        }
+    </script>
 </body>
 
 </html>
