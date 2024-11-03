@@ -2,29 +2,61 @@
 <html lang="en">
     <head>
         <title>Tic Tac Toe</title>
+        <link rel="stylesheet" href="../styles.css">
     </head>
     <body>
-        <h1>Tic Tac Toe</h1>
+        <div class="content">
+            <h1>Tic Tac Toe</h1>
+            
+            We're gonna continue on our `Tic Tac Toe` game developed from last semester.
+            This is a two-player game where each player takes turns to mark a square on a 3x3 grid.
+            The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
+            
+            <img src="./img/game_over.png" alt="Tic Tac Toe" style="width: 300px;">
+            
+            <p>
+                This time, we're gonna make some adjustments so that human players can play against the computer.
+            </p>
+            <h2>Starter Code</h2>
+            
+            Click to view or download the starter code for this project.
+            <ul>
+                <li><a href="./src/run.html">run.py</a></li>
+                <li><a href="./src/particle.html">particle.py</a></li>
+            </ul>
+            
+            <h2>Code Refactor</h2>
+            <p>Code refactoring is the process of restructuring existing code without changing its external behavior or
+                functionality.
+                It improves the internal structure, readability, and maintainability of the code, making it easier to understand,
+                debug,
+                and extend in the future. </p>
+                <h3>Common Refactoring Techniques</h3>
+                <ul>
+                    <li>Extract Method: Pulling out a piece of code from a long function into its own method to reduce complexity and improve
+                    readability.</li>
+                    <li>Rename Variables: Giving variables meaningful names to improve clarity.</li>
+                    <li>Remove Duplicate Code: Eliminating redundant code by creating reusable functions or classes.</li>
+                    <li>Separation of Concerns: Use python modules to separate different functionalities into distinct files, making the codebase
+                    more organized and manageable.</li>
+                </ul>
+            <h3>Task</h3>
+            We're going separate the starter code <code>run.py</code> into multiple files:
+            <ul>
+                <li><code>game_logic.py</code>: Contains the game logic functions like <code>check_win</code> and <code>check_tie</code>.</li>
+                <li><code>colors.py</code>: Contains the color constants used in the game.</li>
+                <li><code>drawings.py</code>: Contains the drawing functions like <code>redraw</code> and <code>button_rect</code>.</li>
+                <li><code>main.py</code>The remaining code after moving functionsout. It contains the main running loop of the code</li>
+            </ul>
 
-        We're gonna continue on our `Tic Tac Toe` game developed from last semester.
-        This is a two-player game where each player takes turns to mark a square on a 3x3 grid.
-        The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row wins the game.
-
-        <img src="./img/game_over.png" alt="Tic Tac Toe" style="width: 300px;">
-
-        <p>
-            This time, we're gonna make some adjustments so that human players can play against the computer.
-        </p>
-        <h2>Starter Code</h2>
-
-        Click to view or download the starter code for this project.
-        <ul>
-            <li><a href="./src/run.html">run.py</a></li>
-            <li><a href="./src/particle.html">particle.py</a></li>
-        </ul>
-
-
-
+            Here's what your <code>main.py</code> should look like after refactoring:
+            <ul>
+                <li><a href="./src/refactored_fib/main.html">main.py</a></li>
+               
+            </ul>
+            Please finish the rest of files
+        </div>
+          
     </body>
 
 </html>
