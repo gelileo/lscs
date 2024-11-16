@@ -3,6 +3,34 @@
     <head>
         <title>Tic Tac Toe</title>
         <link rel="stylesheet" href="../styles.css">
+        <style>
+            .strategy-list {
+                list-style-type: none;
+                padding: 0;
+            }
+        
+            .strategy-item {
+                margin-bottom: 10px;
+            }
+        
+            .strategy-description {
+                display: none;
+                margin-top: 5px;
+                padding: 10px;
+                border: 1px solid #ccc;
+                background-color: #f9f9f9;
+            }
+            .link-button {
+                background: none;
+                border: none;
+                color: blue;
+                /* text-decoration: underline; */
+                cursor: pointer;
+                font-size: inherit;
+                font-family: inherit;
+                padding: 0;
+            }
+        </style>
     </head>
     <body>
         <div class="content">
@@ -22,7 +50,7 @@
             Click to view or download the starter code for this project.
             <ul>
                 <li><a href="./src/run.html">run.py</a></li>
-                <li><a href="./src/particle.html">particle.py</a></li>
+                <li><a href="./src/refactored_ttt/particle.html">particle.py</a></li>
             </ul>
             
             <h2>Code Refactor</h2>
@@ -51,12 +79,59 @@
 
             Here's what your <code>main.py</code> should look like after refactoring:
             <ul>
-                <li><a href="./src/refactored_fib/main.html">main.py</a></li>
-               
+                <li><a href="./src/refactored_ttt/main.html">main.py</a></li>
+                
+
             </ul>
             Please finish the rest of files
+
+            <h3>Complete Refactored Source Code</h3>
+            <ul>
+                <li><a href="./src/refactored_ttt/main.html">main.py</a></li>
+                <li><a href="./src/refactored_ttt/colors.html">colors.py</a></li>
+                <li><a href="./src/refactored_ttt/drawings.html">drawings.py</a></li>
+                <li><a href="./src/refactored_ttt/game_logic.html">game_logic.py</a></li>
+            </ul>
+
+            <h2>Player vs. Computer</h2>
+            <p>
+                To make the game more interesting, we're gonna add a computer player that can play against the human player.
+                The computer player will make its move based on a simple algorithm that you will implement.
+            </p>
+
+            
+            <h3>Computer Strategies</h3>
+            <ul class="strategy-list">
+                <li class="strategy-item">
+                    <button class="link-button">- Random Move</button>
+                    <div class="strategy-description">The computer makes a random move on the board.</div>
+                </li>
+                <li class="strategy-item">
+                    <button class="link-button">- Center Move</button>
+                    <div class="strategy-description">The computer makes a move to occupy the center of the board.</div>
+                </li>
+                <li class="strategy-item">
+                    <button class="link-button">- Corner Move</button>
+                    <div class="strategy-description">The computer makes a move to occupy a corner of the board.</div>
+                </li>
+                <li class="strategy-item">
+                    <button class="link-button">- Winning Move</button>
+                    <div class="strategy-description">The computer makes a move that will lead to a win.</div>
+                </li>
+            </ul>
         </div>
-          
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const buttons = document.querySelectorAll('.link-button');
+
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const description = button.nextElementSibling;
+                    description.style.display = description.style.display === 'none' || description.style.display === '' ? 'block' : 'none';
+                });
+            });
+        });
+    </script>      
     </body>
 
 </html>

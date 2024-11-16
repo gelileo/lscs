@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main.py</title>
+    <style>
+        /* Correct styling for pre and code elements */
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+    
+        code {
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <div id="content"></div>
+    <script>
+        const markdown = `
+        ## colors.py
+        # Colors
+        WHITE = (255, 255, 255)
+        BLUE = (64, 128, 255, 160)
+        BLACK = (0, 0, 0)
+        GRAY = (200, 200, 200, 128)
+        DARK_GRAY = (128, 128, 128)  # Darker color for hover effect
+
+        
+        `;
+
+        marked.setOptions({
+                highlight: function (code, lang) {
+                    // Use <pre><code> structure for proper styling
+                    return `<pre><code>${code}</code></pre>`;
+                }
+            });
+        document.getElementById('content').innerHTML = marked.parse(markdown);
+
+    </script>
+</body>
+</html>

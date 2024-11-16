@@ -26,6 +26,7 @@
     <div id="content"></div>
     <script>
         const markdown = `
+        ## main.py
         import pygame
         import sys
         import random
@@ -34,6 +35,8 @@
         from game_logic import check_win, check_tie
         from colors import WHITE, BLUE, BLACK, GRAY, DARK_GRAY
         from drawings import redraw, screen_height, screen_width, cell_size, button_rect
+
+        # Add the directory containing the module to sys.path
         from particle import Particle, draw_particles, celebration
 
         # Initialize Pygame
@@ -125,6 +128,8 @@
         # Quit Pygame
         pygame.quit()
         sys.exit()
+
+        
         `;
 
         marked.setOptions({
