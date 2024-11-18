@@ -101,7 +101,12 @@
 
             
             <h3>Computer Strategies</h3>
+            We've disucssed several strategies that the computer can use to make its move:
             <ul class="strategy-list">
+                <li class="strategy-item">
+                    <button class="link-button">- First Available Move</button>
+                    <div class="strategy-description">The computer makes a move on the first empty location on the board.</div>
+                </li>
                 <li class="strategy-item">
                     <button class="link-button">- Random Move</button>
                     <div class="strategy-description">The computer makes a random move on the board.</div>
@@ -115,10 +120,24 @@
                     <div class="strategy-description">The computer makes a move to occupy a corner of the board.</div>
                 </li>
                 <li class="strategy-item">
+                    <button class="link-button">- Edge Move</button>
+                    <div class="strategy-description">The computer makes a move to occupy an edge of the board.</div>
+                </li>
+                <li class="strategy-item">
                     <button class="link-button">- Winning Move</button>
                     <div class="strategy-description">The computer makes a move that will lead to a win.</div>
                 </li>
+                <li class="strategy-item">
+                    <button class="link-button">- Blocking Move</button>
+                    <div class="strategy-description">The computer makes a move to block the opponent from winning.</div>
+                </li>
             </ul>
+
+            Please find the source code here:
+            <ul>
+                <li><a href="./src/ai_ttt/computer.html">computer.py</a></li>
+            </ul>
+            and try to implement rest of strategies in the <code>computer_move</code> function.
         </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {

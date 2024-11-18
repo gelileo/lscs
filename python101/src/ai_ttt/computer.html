@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>computer.py</title>
+    <style>
+        /* Correct styling for pre and code elements */
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        code {
+            font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <div id="content"></div>
+    <script>
+        const markdown = `
+        ## computer.py
+        # - first available
+        # - random move
+        # - center move
+        # - corner move
+        # - edge move
+        # - winning move
+        # - blocking moving
+
+        import random
+        def computer_move(board):
+            if not center_move(board):
+                random_move(board)
+
+
+        def random_move(board):
+            while True:
+                row = random.randint(0,2)
+                col = random.randint(0,2)
+                if board[row][col] == "":
+                board[row][col] = "O"
+                break
+
+
+        def first_awailable_move(board):
+            for row in range(3):
+                for col in range(3):
+                if board[row][col] == "":
+                    board[row][col] = "O"
+                    print(f"computer move: ({row}, {col})")
+                    return
+
+
+        def center_move(board):
+            if is_available(board, 1,1):
+                board[1][1] = "O"
+                return True
+            return False
+
+
+        def is_available(board, row, col):
+            return board[row][col] == ""
+        
+        `;
+
+        marked.setOptions({
+            highlight: function (code, lang) {
+                // Use <pre><code> structure for proper styling
+                return `<pre><code>${code}</code></pre>`;
+            }
+        });
+        document.getElementById('content').innerHTML = marked.parse(markdown);
+
+    </script>
+</body>
+
+</html>
