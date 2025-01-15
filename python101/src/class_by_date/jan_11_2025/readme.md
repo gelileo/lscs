@@ -2,7 +2,7 @@
 
 
 - Continued on helping students finishing the Tic Tac Toe game.
-- `computer_move()` func now takes an extra argument
+- `computer_move()` func now takes an extra argument `level`
 - Introduced two new computer stragtegies.
     - Fork
     - Blocking Fork move
@@ -20,16 +20,16 @@
 
  - Find the starter code from [src/ folder](./src/)
  - Implement the computer move functions for all three levels
- - Test you game to ensure it works as expected.
+ - Test your game to ensure it works as expected.
 
 
  ### Challenge
 
- Implement a way to keep track of game stats. For example how many games are played? at what level? what's the winning rate etc.
+ Implement a way to keep track of game stats. For example, how many games are played? at what level? what's the winning rate? etc.
 
 #### Tips
 
-- Use a dictionary to store the game stats, for example:
+- Use a Dictionary to store the game stats, for example:
 
 ```
     {
@@ -50,17 +50,17 @@
         }
     }
 ```
-Update the appropriate value accordingly after each game is completed. For instance:
+Update the appropriate value accordingly after each game is played. For instance:
 
 ```
     game_stats[level][result] += 1
 ```
 
-- You can choose to output the Dictionary to a file, so that stats can be brought to the next time you run the program
+- You can choose to output the Dictionary to a file, so that stats can be brought over the next time you run the program
 
-- `json` is built-in python lib that helps store Dictionary Data
+- `json` is a built-in python lib that helps store Dictionary Data
 
-Here're sample code that saves and loads `game_stats` Dictionary to / from a file.
+Here're some  sample code that saves and loads `game_stats` Dictionary to/from a file.
 
 ```
 import json
