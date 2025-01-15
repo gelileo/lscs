@@ -23,4 +23,54 @@
  - Test you game to ensure it works as expected.
 
 
- 
+ ### Challenge
+
+ Implement a way to keep track of game stats. For example how many games are played? at what level? what's the winning rate etc.
+
+#### Tips
+
+- Use a dictionary to store the game stats, for example:
+
+```
+    {
+        "Easy": {
+            "win": 0,
+            "lose": 1,
+            "draw": 0
+        },
+        "Hard": {
+            "win": 2,
+            "lose": 0,
+            "draw": 0
+        },
+        "Pro": {
+            "win": 0,
+            "lose": 1,
+            "draw": 0
+        }
+    }
+```
+Update the appropriate value accordingly after each game is completed. For instance:
+
+```
+    game_stats[level][result] += 1
+```
+
+- You can choose to output the Dictionary to a file, so that stats can be brought to the next time you run the program
+
+- `json` is built-in python lib that helps store Dictionary Data
+
+Here're sample code that saves and loads `game_stats` Dictionary to / from a file.
+
+```
+import json
+
+# Save the stats
+with open("game_stats.json", "w") as file:
+    json.dump(game_stats, file)
+
+
+# Load the stats
+with open("game_stats.json", "r") as file:
+    game_stats = json.load(file)
+```
